@@ -11,5 +11,5 @@ RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o /go/bin/kube-eagle
 FROM scratch
 COPY --from=builder /go/bin/kube-eagle /go/bin/kube-eagle
 
-ENV VERSION 1.1.5
+ENV VERSION 1.1.6
 ENTRYPOINT ["/go/bin/kube-eagle"]
